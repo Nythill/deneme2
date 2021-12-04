@@ -1,15 +1,15 @@
-var enchant = ["shitty " , "frozen " , "glowing "];
+var enchant = ["blazing " , "frozen " , "glowing "];
 
 var weapon = ["axe " , "sword " , "spear "];
 
-var ident = ["of serhat" , "of bob" , "of eftal"]
+var ident = ["of serhat" , "of murat" , "of eftal"]
 
-var randenchant = enchant[Math.floor(Math.random() * enchant.length)];
+function Randomize(arr)
+{
+    var RandomizedData = arr[Math.floor(Math.random() * arr.length)];
+    return RandomizedData;
+} 
 
-var randweapon = weapon[Math.floor(Math.random() * weapon.length)];
+var randomed = Randomize(enchant) + Randomize(weapon) + Randomize(ident);
 
-var randident = ident[Math.floor(Math.random() * ident.length)];
-
-var drop = randenchant+randweapon+randident
-
-console.log(drop)
+console.log(randomed) 
